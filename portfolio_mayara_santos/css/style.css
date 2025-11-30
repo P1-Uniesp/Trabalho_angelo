@@ -685,3 +685,25 @@ section {
 .scroll-top.active {
     display: flex;
 }
+
+/* Classes de controle de animação via JS (prefira usar estas em vez de animations globais) */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+}
+
+.animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Se o elemento estiver com a classe .animate, desativar animação por keyframes pré-existente para evitar sobreposição */
+.hero__content.animate,
+.sobre__content.animate,
+.projeto-card.animate,
+.contato__info.animate,
+.contato__form.animate {
+    animation: none !important;
+}
