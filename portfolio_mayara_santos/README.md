@@ -53,7 +53,7 @@ portfolio-mayara-santos/
 │   └── style.css      # Estilos principais
 ├── js/
 │   └── main.js        # Funcionalidades JavaScript
-├── images/            # Pasta para imagens (reservada)
+├── img/            # Pasta para imagens (reservada)
 ├── README.md          # Este arquivo
 └── instruções portfólio.txt  # Instruções do projeto
 ```
@@ -269,10 +269,10 @@ Este projeto foi desenvolvido seguindo as melhores práticas de:
 
 ## Autor
 
-Desenvolvido como parte do projeto final da disciplina de Portfólio Web Dinâmico.
+Desenvolvido como parte do projeto final da disciplina de Intrudução à Front-end
 
 ---
 
-**Data de Criação:** Novembro 2024  
+**Data de Criação:** Novembro 2025  
 **Versão:** 1.0  
 **Status:** Completo e funcional
