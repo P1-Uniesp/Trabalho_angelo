@@ -1,0 +1,1079 @@
+/* ===========================
+   FONTES PERSONALIZADAS
+=========================== */
+@font-face {
+    font-family: 'Staatliches';
+    src: url('../fonts/Staatliches-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+/* ===========================
+   RESET BÁSICO
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ===========================
+   VARIÁVEIS DE ESTILO
+=========================== */
+:root {
+    --yellow: #ffb500;
+    --purple: #924fff;
+    --gray: #dddddd;
+    --black: #000000;
+    --white: #ffffff;
+
+    /* textos */
+    --text: #000000;
+    --text-light: #dddddd;
+
+    /* espaçamentos */
+    --gap: 1.5rem;
+    --radius: 12px;
+    --transition: .3s ease;
+}
+
+/* ===========================
+   TIPOGRAFIA GLOBAL
+=========================== */
+/* ===========================
+   TÍTULOS COM STAATLICHES
+=========================== */
+h4, h5 {
+    color: var(--black);
+    font-weight: 700;
+}
+
+p {
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ===========================
+   LINKS
+=========================== */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ===========================
+   HEADER + NAV
+=========================== */
+header {
+    width: 100%;
+    background: var(--purple);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 45px;
+}
+
+/* Menu padrão desktop */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: var(--yellow);
+}
+
+/* ===========================
+   MENU MOBILE (HAMBURGER)
+=========================== */
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--purple);
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        display: none;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+.btn-primario {
+    background: var(--yellow);
+    color: var(--black);
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-primario:hover {
+    background: #e4a100;
+}
+
+.btn-secundario {
+    background: var(--purple);
+    color: var(--white);
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    display: inline-block;
+    transition: var(--transition);
+}
+.btn-primario,
+.btn-secundario {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.1rem;
+}
+
+
+.btn-secundario:hover {
+    background: #7a3adf;
+}
+
+/* ===========================
+   HERO INICIAL
+=========================== */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 3rem 1rem;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero-bg-foto {
+  min-width: 300px;
+  max-width: 20%;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.hero-content {
+    margin-top: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--purple);
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.5rem;
+    color: var(--black);
+    opacity: 0.9;
+    margin: 2rem 0px;
+    letter-spacing: 1px;
+}
+
+
+/* Foto */
+.hero-image img {
+    max-width: 260px;
+    margin-top: 2rem;
+}
+
+/* Elementos decorativos */
+.decor {
+    position: absolute;
+    width: 80px;
+    opacity: 0.6;
+}
+
+/* ajuste inicial sem estilo definitivo */
+.decor-nuvens {
+    bottom: 10px;
+    left: 10px;
+}
+
+.decor-tool {
+    top: 20px;
+    right: 30px;
+}
+
+.decor-selecao {
+    left: 20px;
+    top: 120px;
+}
+
+/* ===========================
+   INTRO SECTION
+=========================== */
+.intro {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 3rem;
+    color: var(--purple);
+    text-shadow: 2px 2px var(--yellow);
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: var(--black);
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0.5rem auto;
+    line-height: 1.6;
+}
+
+/* ===========================
+   LOGO VOXES + SELEÇÃO
+=========================== */
+
+.hero-logo-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(146, 79, 255, 0.35),
+        rgba(255, 181, 0, 0.25)
+    );
+    z-index: -1;
+}
+/* Seleção fica por trás */
+.logo-selection {
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    width: 120%;
+    z-index: 1;
+    opacity: 0.85;
+    filter: drop-shadow(0px 8px 14px rgba(0,0,0,0.25));
+    animation: floating 5s ease-in-out infinite;
+}
+
+/* Logo Voxes por cima */
+.logo-voxes {
+    position: relative;
+    z-index: 2;
+    width: 260px;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.3));
+    transition: 0.3s ease;
+}
+
+.logo-voxes:hover {
+    transform: scale(1.03);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .logo-voxes {
+        width: 190px;
+    }
+
+    .logo-selection {
+        left: -17px;
+        top: -18px;
+    }
+    .hero-bg {
+        height: 100%;
+    }
+    
+}
+@media (max-width: 900px) {
+  .hero-bg-foto {
+      display: none;
+    }
+}
+/* ===========================
+   MOVE TOOL (Movetool.png)
+=========================== */
+
+.decor-movetool {
+    position: absolute;
+    width: 50px;
+    bottom: -42px;
+    right: -72px;
+    z-index: 3;
+    opacity: 0.9;
+    filter: drop-shadow(0px 8px 14px rgba(0,0,0,0.3));
+}
+
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .decor-movetool {
+        width: 35px;
+        bottom: -23px;
+        right: -52px;
+    }
+}
+h1, h2, h3, .title, .section-title {
+    font-family: 'Staatliches', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+    background: var(--purple);
+    padding: 3rem 1rem 2rem;
+
+    color: var(--white);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Logo + Seleção no footer */
+.footer-logo {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-selection {
+    position: absolute;
+    top: -12px;
+    left: -15px;
+    width: 115%;
+    opacity: 0.7;
+    z-index: 1;
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.25));
+    animation: floating 6s ease-in-out infinite;
+}
+
+.footer-voxes {
+    width: 180px;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.3));
+}
+
+/* Redes sociais */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 0px 0px 1.2rem 0px;
+}
+
+.footer-social img {
+    width: 32px;
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+/* Copyright */
+.footer-copy {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsivo */
+@media(max-width: 768px) {
+    .footer-voxes {
+        width: 150px;
+    }
+
+    .footer-selection {
+        width: 130%;
+    }
+}
+/* ===========================
+   SOBRE: BIO / EXPERIÊNCIAS / HABILIDADES
+   (mobile-first)
+=========================== */
+
+/* containers e grid utilitário */
+.section {
+  padding: 2.2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* grid dois blocos (stack em mobile) */
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+/* BIO */
+.bio {
+  background: var(--white);
+  color: var(--black);
+}
+
+.greeting {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--black);
+  margin-bottom: 0.4rem;
+}
+
+.greeting .highlight {
+  color: var(--purple);
+  font-style: italic;
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  background: #111;
+  margin: 0.8rem 0 1rem 0;
+  opacity: 0.9;
+}
+
+/* lead text */
+.lead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* contatos */
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contacts li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #222;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 500;
+}
+
+.contacts img {
+  width: 26px;
+  opacity: 1;
+}
+
+
+/* IG mockup */
+.ig-mockup {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.ig-frame { width: 100%; display: block; border-radius: 10px; }
+.ig-photo {
+  position: absolute;
+  top: 8.5%;
+  left: 10%;
+  width: 78%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.2));
+}
+.bio-post {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
+}
+
+/* ===========================
+   RESPONSIVIDADE (tablet/desktop)
+=========================== */
+@media (min-width: 768px) {
+
+  .grid-two {
+    grid-template-columns: 1fr 420px;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .bio-text { order: 1; }
+  .bio-visual { order: 2; }
+
+  .ig-mockup { max-width: 480px; }
+
+  
+
+  .exper-computer { width: 360px; }
+
+  .exper-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .hab-container {
+    grid-template-columns: 1fr 420px;
+    align-items: start;
+  }
+
+  .hab-left { padding-right: 1.4rem; }
+}
+
+/* desktop wide */
+@media (min-width: 1100px) {
+
+  .greeting { font-size: 3.2rem; }
+  .lead { font-size: 1.05rem; max-width: 780px; }
+
+  .bio { padding: 3.6rem 0; }
+  .experiencias { padding: 3.6rem 0; }
+  .habilidades { padding: 3.6rem 0; }
+}
+/* ========== BASE DA SEÇÃO ========== */
+#experiencia-pdf {
+  width: 100%;
+  background: #924fff; /* fundo roxo igual ao PDF */
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+
+#experiencia-pdf .wrapper {
+  width: 90%;
+  max-width: 1500px;
+  display: grid;
+  grid-template-columns: 1fr 0.05fr 1fr;
+  align-items: start;
+  gap: 50px;
+  position: relative;
+}
+
+
+/* ========== LADO ESQUERDO (COMPUTADOR + TEXTURA) ========== */
+
+.exper-left {
+  display: flex;
+  justify-content: center;
+}
+
+.exper-left .exper-texture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.exper-left .exper-computer {
+  
+  width: 50%;
+  height: 50%;
+  filter: drop-shadow(8px 8px 0px rgba(0,0,0,0.5));
+}
+
+
+/* ========== LINHA VERTICAL ========== */
+
+.vertical-divider {
+  width: 3px;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  margin: auto;
+}
+
+
+/* ========== LADO DIREITO (TÍTULO, GRID ETC.) ========== */
+
+.exper-right {
+  color: white;
+  position: relative;
+}
+
+
+/* ========== HEADER (TÍTULO + BOTÕES) ========== */
+
+.exper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.exper-header .title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.window-buttons {
+  width: 80px;
+  height: auto;
+}
+
+
+/* ========== GRID DAS EXPERIÊNCIAS ========== */
+
+.exper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 50px;
+  margin-bottom: 50px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ITEM */
+.exp {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bullet {
+  width: 22px;
+  filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.4));
+}
+
+.exp-content .year {
+  font-size: 18px;
+  font-weight: 600;
+  color: #dddddd;
+}
+
+.role {
+  margin: 2px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.role.highlight {
+  color: #ffb500;
+}
+
+.desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #eaeaea;
+}
+
+
+/* ========== ENSINO ========== */
+
+.ensino-title {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.ensino-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 50px;
+}
+
+
+/* ========== RODAPÉ DA SEÇÃO ========== */
+
+.footnote {
+  margin-top: 40px;
+  font-size: 15px;
+  font-style: italic;
+  opacity: 0.85;
+  color: white;
+}
+@media (max-width: 1200px) {
+
+  #experiencia-pdf .wrapper {
+    grid-template-columns: 1fr 0.03fr 1fr;
+    gap: 40px;
+  }
+
+  .exper-left .exper-computer {
+    width: 300px;
+    top: 50px;
+  }
+
+  .exper-header .title {
+    font-size: 36px;
+  }
+
+  .window-buttons {
+    width: 65px;
+  }
+}
+@media (max-width: 900px) {
+
+  #experiencia-pdf .wrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .vertical-divider {
+    display: none; /* linha some */
+  }
+
+  /* computador centralizado */
+  .exper-left {
+    display: none;
+  }
+  .exper-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+  }
+  .ensino-title {
+    margin-top: 0;
+  }
+
+
+  .exper-left .exper-computer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 280px;
+    margin-top: 20px;
+  }
+
+  .exper-left .exper-texture {
+    display: none; /* textura some no mobile/tablet */
+  }
+
+  .exper-header {
+    margin-top: 20px;
+    grid-column: 1/-1;
+  }
+  .exper-header img{
+    display: none;
+  }
+
+
+  .exper-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ensino-grid {
+    grid-template-columns: 1fr;
+  }
+  .footnote{
+    grid-column: 1/-1;
+    color: white;
+  }
+}
+@media (max-width: 600px) {
+
+  #experiencia-pdf {
+    padding: 40px 0;
+  }
+
+  .exper-header {
+    align-items: flex-start;
+  }
+
+  .exper-header .title {
+    font-size: 30px;
+  }
+
+  .window-buttons {
+    width: 55px;
+  }
+
+  .exper-grid,
+  .ensino-grid {
+    gap: 25px;
+  }
+
+  .exp {
+    gap: 12px;
+  }
+
+  .bullet {
+    width: 18px;
+  }
+
+  .exp-content .year {
+    font-size: 16px;
+  }
+
+  .role {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .ensino-title {
+    margin-top: 25px;
+    font-size: 28px;
+  }
+
+  .footnote {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+/* ================================================================
+   SEÇÃO HABILIDADES — LAYOUT
+================================================================ */
+.hab-left{
+  margin: 0 auto;
+}
+.hab-wrapper {
+  width: 100%;
+  background: var(--gray);
+  padding: 0px 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  gap: 80px;
+  padding-left: 50px;
+}
+
+
+/* ================================================================
+   ESQUERDA — IMAGENS DE HABILIDADES
+================================================================ */
+.hab-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: #ffb500;
+  margin: 40px 0px;
+}
+
+.hab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.skill-img {
+  width: 80%;
+  max-width: 260px;
+}
+.skill-img:last-child {
+  min-height: 100%;
+  width: 100%;
+}
+.skill-img:first-child{
+  width: 90%;
+}
+.skill-img:nth-child(4){
+  width: 90%;
+}
+/* ================================================================
+   DIREITA — FUNDO + ELEMENTOS
+================================================================ */
+.hab-right {
+  position: relative;
+  width: 700px;
+  height: 600px;
+}
+
+/* FUNDO CÉU */
+.ceu-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+}
+
+/* LOGO ADOBE */
+.adobe-logo {
+  position: absolute;
+  width: 380px;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+/* TEXTO ADOBE SUPERIOR DIREITO */
+.text-adobe {
+  position: absolute;
+  width: 260px;
+  top: 5%;
+  right: 5%;
+}
+
+/* EMOJI CANTO INFERIOR ESQUERDO */
+.emoji {
+  position: absolute;
+  width: 200px;
+  bottom: 5%;
+  left: 5%;
+}
+
+/* Asterisco opcional */
+.star-deco {
+  position: absolute;
+  width: 80px;
+  bottom: 20%;
+  right: 15%;
+}
+
+
+
+/* ================================================================
+   RESPONSIVIDADE
+================================================================ */
+@media (max-width: 1100px) {
+  .hab-right {
+    height: 500px;
+  }
+}
+@media (max-width: 900px) {
+  .hab-wrapper{
+    padding: 0px 20px;
+  }
+  .hab-left {
+    margin: 0;
+  }
+  .hab-right{
+    display: none;
+  }
+  .hab-grid{
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 700px) {
+
+  .hab-wrapper{
+    padding: 0px 20px;
+  }
+
+  .hab-title {
+    font-size: 36px;
+  }
+  .skill-img{
+    max-width: 100%;
+  }
+  .hab-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hab-right {
+    height: 420px;
+  }
+
+  .emoji {
+    width: 150px;
+  }
+
+  .adobe-logo {
+    width: 260px;
+  }
+
+  .text-adobe {
+    width: 200px;
+  }
+  
+}
